@@ -31,7 +31,6 @@ type config struct {
 }
 
 func init() {
-	sql.DriverName = "sqlite3"
 	db.Register("sqlite3", func(node yaml.Node) db.Database {
 		conf := new(config)
 		_ = node.Decode(conf)
